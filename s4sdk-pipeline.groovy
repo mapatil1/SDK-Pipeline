@@ -74,13 +74,13 @@ pipeline {
             }
         }
 
-        stage('Quality Checks') {
-            when { expression { commonPipelineEnvironment.configuration.runStage.QUALITY_CHECKS } }
-            steps {
-                milestone 50
-                stageS4SdkQualityChecks script: this
-            }
-        }
+  //      stage('Quality Checks') {
+    //        when { expression { commonPipelineEnvironment.configuration.runStage.QUALITY_CHECKS } }
+      //      steps {
+        //        milestone 50
+          //      stageS4SdkQualityChecks script: this
+       //     }
+      //  }
 
         stage('Third-party Checks') {
             when { expression { commonPipelineEnvironment.configuration.runStage.THIRD_PARTY_CHECKS } }
